@@ -1,7 +1,8 @@
 import {CREATE_POST} from './types'
+
 const initialState = {
-    posts:[],
-    fetchedPosts:[]
+    posts:[''],
+    fetchedPosts:['']
 }
 
 export const postsReducer = (state=initialState,action) =>{
