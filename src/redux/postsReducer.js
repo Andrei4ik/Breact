@@ -1,8 +1,8 @@
 import {CREATE_POST} from './types'
 
 const initialState = {
-    posts:[''],
-    fetchedPosts:['']
+    posts:[],
+    fetchedPosts:[]
 }
 
 export const postsReducer = (state=initialState,action) =>{
@@ -11,5 +11,4 @@ export const postsReducer = (state=initialState,action) =>{
             return { ...state, posts: state.posts.concat([action.payload]) }
         default: return state
     }
-   
 }
