@@ -7,13 +7,14 @@ class PostForm extends React.Component {
     constructor(props) {
         super(props)
 
-        this.state = {}
+        this.state = {title:''};
     }
 
     submitHandler = event => {
         event.preventDefault()
 
         const {title} = this.state
+
 
         const newPost = {
             title,id: Date.now().toString()
@@ -39,7 +40,7 @@ class PostForm extends React.Component {
                 <input
                     type="text"
                     className="form-control" 
-                    id="title" 
+                    id="title"    
                     value={this.state.title}
                     name="title"
                     onChange={this.changeInputHandler}
